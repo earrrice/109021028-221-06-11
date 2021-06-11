@@ -41,7 +41,7 @@ window.columnconfigure(2,weight=1)
 window.columnconfigure(3,weight=1)
 
 lab=Label(window,text="0",justify=RIGHT,anchor=E)
-lab.grid(row=0,column=0,columnspan=3,sticky=EW)
+lab.grid(row=0,column=0,columnspan=4,sticky=EW)
 
 bt7=Button(window,text="7",command=lambda:lst("7"))
 bt7.grid(row=1,column=0,sticky=NSEW)
