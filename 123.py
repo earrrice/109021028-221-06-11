@@ -2,6 +2,7 @@ from tkinter import *
 
 op=0
 n1=0
+n2=0
 opf=False
 def lst(nm):
     if int(lab['text'])!=0 and opf==False:
@@ -12,21 +13,35 @@ def lst(nm):
 def opst(opv):
     global op
     global n1
+    global n2
     global opf
-    n1=int(lab['text'])
     op=opv
     opf=True
+    if op==0:
+        n1=int(lab['text'])
+    else:
+        n2=int(lab['text'])
+    if op=="1":
+        num=n1+n2
+    elif op=="2":
+        num=n1-n2
+    elif op=="3":
+        num=n1*n2
+    elif op=="4":
+        num=n1/n2
+    n1=num
 
 def equal():
     n2=int(lab['text'])
     if op=="1":
-        lab['text']=n1+n2
+        num=n1+n2
     elif op=="2":
-        lab['text']=n1-n2
+        num=n1-n2
     elif op=="3":
-        lab['text']=n1*n2
+        num=n1*n2
     elif op=="4":
-        lab['text']=n1/n2
+        num=n1/n2
+    lab['text']=num
 
 window=Tk()
 window.title("lable")
